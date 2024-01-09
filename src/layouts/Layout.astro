@@ -1,0 +1,24 @@
+---
+import '@fontsource-variable/space-grotesk'
+
+interface Props {
+	title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astrowberry is a accessible, SEO-friendly and beautiful blog theme for Astro, built with TailwindCSS." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="font-sans">
+		<slot />
+	</body>
+</html>
