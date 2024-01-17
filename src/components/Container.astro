@@ -1,6 +1,15 @@
-<main class="
-    flex flex-col justify-center items-center gap-y-6
-    relative w-full h-screen mx-auto pb-12 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pb-28
+---
+import Header from "./Header.astro"
+---
+
+<div class="
+    flex flex-col gap-y-6
+    relative w-full h-screen py-12 mx-auto md:max-w-3xl md:mx-auto lg:max-w-4xl lg:py-16
+    text-content dark:text-content-dark
 ">
-    <slot />
-</main>
+    <Header />
+    
+    <main class="flex flex-col justify-center items-center gap-y-6 h-full">
+        <slot />
+    </main>
+</div>

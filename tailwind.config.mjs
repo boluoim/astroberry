@@ -3,6 +3,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default {
+	darkMode: ['class', '[data-theme="dark"]'],
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
@@ -20,6 +21,23 @@ export default {
 				]
 			},
 		},
+		colors: {
+			brand: {
+				DEFAULT: '#000000',
+				light: '#000000',
+				dark: '#99a2ff'
+			},
+			content: {
+				DEFAULT: '#000000',
+				light: '#000000',
+				dark: '#b8b4d3'
+			},
+			tahiti: {
+				DEFAULT: '#ffffff',
+				light: '#ffffff',
+				dark: '#151724'
+			}
+		}
 	},
 	plugins: [],
 }
