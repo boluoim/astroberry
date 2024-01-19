@@ -77,12 +77,10 @@
 
 <style>
     .theme-toggle {
-        --size: 2rem;
-        --icon-fill: hsl(210 10% 30%);
-        --icon-fill-hover: hsl(210 10% 15%);
+        --icon-size: 1.5rem;
 
-        inline-size: var(--size);
-        block-size: var(--size);
+        inline-size: var(--icon-size);
+        block-size: var(--icon-size);
         aspect-ratio: 1;
         border-radius: 50%;
 
@@ -98,7 +96,7 @@
         }
 
         @media (hover: none) {
-            --size: 3rem;
+            --icon-size: 3rem;
         }
 
         .sun-and-moon {

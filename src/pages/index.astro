@@ -1,11 +1,18 @@
 ---
 import Layout from '~layouts/Layout.astro'
 import Container from '~components/Container.astro'
+import BrandLink from '~components/BrandLink.astro'
 ---
 
 <Layout title="Astroberry">
 	<Container>
-		<h1 class="text-8xl text-brand dark:text-brand-dark">Astroberry</h1>
-		<p class="text-3xl">A beautiful blog theme for Astro, built with TailwindCSS</p>
+		<h1 class="text-5xl text-brand font-bold">
+			Boluo IM
+		</h1>
+		<p class="text-xl">
+			<BrandLink /> is a fast, SEO-friendly, beautiful blog theme for Astro, built with TailwindCSS.
+			This theme follows best practices and provides accessibility out of the box.
+			Light and dark mode are supported by default.
+		</p>
 	</Container>
 </Layout>

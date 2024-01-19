@@ -1,0 +1,11 @@
+---
+import packageJson from '../../package.json'
+import BrandLink from "~components/BrandLink.astro"
+
+const Year = new Date().getFullYear();
+---
+
+<footer class="flex justify-between text-sm">
+    <span>Powered by <BrandLink /> v{packageJson.version}</span>
+    <span>©{Year} Boluo all rights reserved</span>
+</footer>

@@ -22,21 +22,10 @@ export default {
 			},
 		},
 		colors: {
-			brand: {
-				DEFAULT: '#000000',
-				light: '#000000',
-				dark: '#99a2ff'
-			},
-			content: {
-				DEFAULT: '#000000',
-				light: '#000000',
-				dark: '#b8b4d3'
-			},
-			tahiti: {
-				DEFAULT: '#ffffff',
-				light: '#ffffff',
-				dark: '#151724'
-			}
+			brand: 'var(--brand-color)',
+			content: 'var(--content-color)',
+			tahiti: 'var(--tahiti-color)',
+			selection: 'var(--selection-color)'
 		}
 	},
 	plugins: [],

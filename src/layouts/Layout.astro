@@ -18,7 +18,43 @@ const { title } = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="font-sans bg-tahiti dark:bg-tahiti-dark">
+	<body class="relative isolate font-sans bg-tahiti selection:bg-selection">
+		<div class="bg-grid" />
 		<slot />
 	</body>
 </html>
+
+<style is:global>
+	:root {
+		--brand-color: hsl(210 10% 15%);
+		--content-color: hsl(210 10% 30%);
+		--tahiti-color: #ffffff;
+		--icon-fill: var(--content-color);
+        --icon-fill-hover: var(--brand-color);
+		--selection-color: #a3ccf566;
+		--grid-line-color: #d8dde5;
+	}
+
+	[data-theme="dark"] {
+		--brand-color: #99a2ff;
+		--content-color: #b8b4d3;
+		--tahiti-color: #151724;
+		--icon-fill: var(--content-color);
+        --icon-fill-hover: var(--brand-color);
+		--selection-color: #a3ccf526;
+		--grid-line-color: #23262D;
+	}
+</style>
+
+<style>
+    .bg-grid {
+		position: absolute;
+		inset: 0;
+		z-index: -30;
+		mask-image: linear-gradient(to bottom,white 0%,white 33%,transparent 100%);
+		background-size: 20px 20px;
+		background-image: linear-gradient(to right,var(--grid-line-color) 1px,transparent 1px),linear-gradient(to bottom,var(--grid-line-color) 1px,transparent 1px);
+		background-position: top center;
+    	image-rendering: pixelated;
+	}
+</style>
