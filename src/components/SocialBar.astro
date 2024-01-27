@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon/components";
+import { config } from "~site";
+---
+
+{
+    config.social?.length && (
+        <div class="flex gap-x-3">
+            {
+                config.social.map((item) => (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                        <Icon name={item.icon} class="w-8 h-8 cursor-pointer hover:text-brand" />
+                    </a>
+                ))
+            }
+        </div>
+    )
+}
