@@ -1,0 +1,18 @@
+---
+import { config } from '~config';
+
+const measureId = config.ga;
+const url = `https://www.googletagmanager.com/gtag/js?id=${measureId}`;
+---
+
+{
+    measureId && (
+        <script async src={url} is:inline></script>
+        <script define:vars={{ measureId }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', measureId);
+        </script>
+    )
+}

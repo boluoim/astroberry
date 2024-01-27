@@ -5,7 +5,8 @@ export const ConfigSchema = z.object({
     social: z.array(z.object({
         icon: z.string(),
         url: z.string().url(),
-    }))
+    })),
+    ga: z.string().optional(),
 });
 
 export type Config = z.infer<typeof ConfigSchema>;
@@ -33,5 +34,7 @@ export const config: Config = {
             icon: 'mdi:linkedin',
             url: 'https://github.com/boluoim/astroberry'
         }
-    ]
+    ],
+    // Google Analytics tracking ID (leave blank to disable)
+    ga: 'G-F544SMQW96'
 };
