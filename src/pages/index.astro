@@ -4,19 +4,21 @@ import Container from '~components/Container.astro'
 import BrandLink from '~components/BrandLink.astro'
 import VercelDeployLink from '~components/VercelDeployLink.astro'
 import SocialBar from '~components/SocialBar.astro'
+import PostList from '~components/PostList.astro'
 ---
 
 <Layout title="Astroberry">
 	<Container>
-		<h1 class="text-5xl text-brand font-bold">
+		<h1 class="text-3xl md:text-5xl text-brand font-bold">
 			Boluo IM
 		</h1>
-		<p class="text-xl">
+		<p class="text-lg md:text-xl">
 			<BrandLink /> is a fast, SEO-friendly, beautiful blog theme for Astro, built with TailwindCSS.
 			This theme follows best practices and provides accessibility out of the box.
 			Light and dark mode are supported by default.
 		</p>
 		<SocialBar />
-		<VercelDeployLink />
+		<VercelDeployLink class:list={['mb-8']} />
+		<PostList class:list={["mb-8"]} />
 	</Container>
 </Layout>

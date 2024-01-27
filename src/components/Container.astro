@@ -5,10 +5,10 @@ import Footer from "./Footer.astro"
 
 <div class="
     flex flex-col gap-y-6
-    relative w-full h-screen p-12 mx-auto md:max-w-3xl md:mx-auto lg:max-w-4xl lg:py-16
+    relative w-full min:h-screen p-8 md:p-12 mx-auto md:max-w-3xl md:mx-auto lg:max-w-4xl lg:py-16
     text-content selection:bg-selection
 ">
-    <Header />
+    <Header class:list={['mb-16']} />
     
     <main class="flex flex-col justify-center gap-y-6 h-full">
         <slot />

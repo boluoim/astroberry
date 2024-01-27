@@ -1,8 +1,10 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
+
+const props = Astro.props;
 ---
 
-<header class="relative flex justify-between">
+<header class:list={['relative flex justify-between', props.class]}>
     <div class="text-brand text-2xl font-bold">Astroberry</div>
     <ThemeToggle />
 </header>
