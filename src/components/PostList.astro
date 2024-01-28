@@ -1,72 +1,37 @@
 ---
 import { Icon } from "astro-icon/components"
+import type { CollectionEntry } from "astro:content"
+import Tags from "~components/Tags.astro"
+
+interface Props {
+    posts: CollectionEntry<"posts">[]
+    class?: string
+}
 
 const props = Astro.props;
-
-interface Post {
-    title: string
-    date: string
-    description: string
-    slug: string
-};
-
-const posts = [
-    {
-        title: 'How to add a new Social Icon to Astroberry',
-        date: '01/27,2024',
-        description: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
-        slug: 'how-to-add-a-new-social-icon-to-astroberry'
-    },
-    {
-        title: 'How to use Git Hooks to set Created and Modified Dates',
-        date: '01/27,2024',
-        description: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
-        slug: 'how-to-use-git-hooks-to-set-created-and-modified-dates'
-    },
-    {
-        title: 'How to custom TailwindCSS',
-        date: '01/27,2024',
-        description: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
-        slug: 'how-to-custom-tailwindcss'
-    },
-    {
-        title: 'Astroberry v1.0',
-        date: '01/27,2024',
-        description: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
-        slug: 'astroberry-v1-0'
-    }
-] satisfies Post[];
 ---
 
 {
-    posts.length && (
-        <div class:list={[props.class]}>
-            <div>
-                <h2 class="mb-4 text-xl md:text-2xl text-brand font-bold">Posts</h2>
-                <ul>
-                    {
-                        posts.map((post) => (
-                            <li class="mb-4">
-                                <div class="mb-2">
-                                    🌟
-                                    <a href={`/posts/${post.slug}`} class="mb-2 text-lg md:text-xl font-bold text-content underline underline-offset-2 decoration-dashed">
-                                        {post.title}
-                                    </a>
-                                </div>
-                                <div class="flex items-center mb-2 pl-0 md:pl-5 text-sm">
-                                    <Icon name="mdi:calendar" class="inline-block mr-2 w-4 h-4 text-content" />
-                                    {post.date}
-                                </div>
-                                <div class="pl-0 md:pl-5 text-base">{post.description}</div>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
-            <div class="text-lg md:text-xl">
-                <a href="/posts">All Posts</a>
-                <Icon name="mdi:arrow-right" class="inline-block w-4 h-4 text-content" />
-            </div>
-        </div>
+    props.posts.length && (
+        <ul class:list={[props.class]}>
+            {
+                props.posts.map((post) => (
+                    <li class="mb-4">
+                        <div class="mb-2">
+                            🌟
+                            <a href={`/posts/${post.slug}`} class="mb-2 text-lg md:text-xl font-bold text-content underline underline-offset-2 decoration-dashed">
+                                {post.data.title}
+                            </a>
+                        </div>
+                        <div class="flex items-center mb-2 pl-0 md:pl-5 text-sm">
+                            <Icon name="mdi:calendar" class="inline-block mr-2 w-4 h-4 text-content" />
+                            {post.data.updatedAt}
+                            <Tags class="ml-2" tags={post.data.tags} />
+                        </div>
+                        <div class="pl-0 md:pl-5 text-base">{post.data.description}</div>
+                    </li>
+                ))
+            }
+        </ul>
     )
 }

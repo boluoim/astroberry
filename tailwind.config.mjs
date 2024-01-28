@@ -28,5 +28,7 @@ export default {
 			selection: 'var(--selection-color)'
 		}
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+	],
 }

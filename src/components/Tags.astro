@@ -1,0 +1,22 @@
+---
+interface TagsProps {
+    tags: string[]
+    class?: string
+}
+
+const props = Astro.props as TagsProps
+---
+
+{
+    props.tags?.length && (
+        <div class:list={['space-x-2', props.class]}>
+            {
+                props.tags.map(tag => (
+                    <span class="before:content-['#']">
+                        {tag} 
+                    </span>
+                ))
+            }
+        </div>
+    )
+}

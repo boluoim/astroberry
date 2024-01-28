@@ -1,16 +1,21 @@
 ---
+import { Icon } from 'astro-icon/components'
+import { getCollection } from 'astro:content'
 import Layout from '~layouts/Layout.astro'
 import Container from '~components/Container.astro'
 import BrandLink from '~components/BrandLink.astro'
 import VercelDeployLink from '~components/VercelDeployLink.astro'
 import SocialBar from '~components/SocialBar.astro'
 import PostList from '~components/PostList.astro'
+import { config } from '~config'
+
+const postEntries = await getCollection("posts")
 ---
 
 <Layout title="Astroberry">
 	<Container>
 		<h1 class="text-3xl md:text-5xl text-brand font-bold">
-			Boluo IM
+			 { config.author }
 		</h1>
 		<p class="text-lg md:text-xl">
 			<BrandLink /> is a fast, SEO-friendly, beautiful blog theme for Astro, built with TailwindCSS.
@@ -19,6 +24,14 @@ import PostList from '~components/PostList.astro'
 		</p>
 		<SocialBar />
 		<VercelDeployLink class:list={['mb-8']} />
-		<PostList class:list={["mb-8"]} />
+
+		<div class="mb-8">
+			<h2 class="mb-4 text-xl md:text-2xl text-brand font-bold">Posts</h2>
+			<PostList posts={postEntries} />
+			<div class="text-lg md:text-xl">
+                <a href="/posts">All Posts</a>
+                <Icon name="mdi:arrow-right" class="inline-block w-4 h-4 text-content" />
+            </div>
+		</div>
 	</Container>
 </Layout>

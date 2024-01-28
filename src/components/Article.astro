@@ -1,0 +1,7 @@
+---
+const props = Astro.props
+---
+
+<article class:list={[props.class]} class="prose prose-slate lg:prose-xl dark:prose-invert">
+    <slot />
+</article>

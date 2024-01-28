@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 export const ConfigSchema = z.object({
+    brand: z.string(),
     author: z.string(),
     social: z.array(z.object({
         icon: z.string(),
@@ -12,7 +13,8 @@ export const ConfigSchema = z.object({
 export type Config = z.infer<typeof ConfigSchema>;
 
 export const config: Config = {
-    author: 'Boluo',
+    brand: 'Astroberry',
+    author: 'Boluo IM',
     social: [
         {
             icon: 'mdi:github',
