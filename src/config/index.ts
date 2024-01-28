@@ -4,6 +4,7 @@ export const ConfigSchema = z.object({
     brand: z.string(),
     author: z.string(),
     social: z.array(z.object({
+        name: z.string(),
         icon: z.string(),
         url: z.string().url(),
     })),
@@ -17,22 +18,27 @@ export const config: Config = {
     author: 'Boluo IM',
     social: [
         {
+            name: 'Github',
             icon: 'mdi:github',
             url: 'https://github.com/boluoim/astroberry'
         },
         {
+            name: 'Twitter',
             icon: 'mdi:twitter',
             url: 'https://github.com/boluoim/astroberry'
         },
         {
+            name: 'Discord',
             icon: 'mdi:discord',
             url: 'https://github.com/boluoim/astroberry'
         },
         {
+            name: 'Facebook',
             icon: 'mdi:facebook',
             url: 'https://github.com/boluoim/astroberry'
         },
         {
+            name: 'Instagram',
             icon: 'mdi:linkedin',
             url: 'https://github.com/boluoim/astroberry'
         }
