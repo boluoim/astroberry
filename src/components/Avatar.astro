@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets'
+import AvatarSrc from '~assets/avatar.jpg'
+
+interface Props {
+    class?: string
+}
+
+const props = Astro.props;
+---
+<Image
+    id="avatar"
+    src={AvatarSrc}
+    alt="avatar"
+    class:list={[props.class]}
+    class="w-24 h-24 rounded-full cursor-pointer"
+    transition:name="avatar"
+/>
+
+<script>
+    import { navigate } from 'astro:transitions/client'
+
+    document.querySelector('#avatar')?.addEventListener('click', () => navigate('/'))
+</script>

@@ -23,6 +23,7 @@ const { Content } = await entry.render()
 
 <Layout title={entry.data.title}>
     <Container>
+        <h1 class="text-2xl md:text-5xl font-bold" transition:name={`post-title:${entry.slug}`}>{entry.data.title}</h1>
         <Article>
             <Content />
         </Article>

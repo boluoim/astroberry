@@ -1,15 +1,12 @@
 ---
 import ThemeToggle from "~components/ThemeToggle.astro"
-import { config } from "~config"
+import Avatar from '~components/Avatar.astro'
 
 const props = Astro.props;
+const isHome = Astro.url.pathname === '/';
 ---
 
-<header class:list={['relative flex justify-between', props.class]}>
-    <div class="text-brand text-2xl font-bold">
-        <a href="/" class="block">
-            {config.brand}
-        </a>
-    </div>
+<header class:list={['relative flex flex-row-reverse justify-between items-center', props.class]}>
     <ThemeToggle />
+    {!isHome && <Avatar class="w-10 h-10 md:w-12 md:h-12" />}
 </header>

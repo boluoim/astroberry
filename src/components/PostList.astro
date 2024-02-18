@@ -19,7 +19,7 @@ const props = Astro.props;
                     <li class="mb-4">
                         <div class="mb-2">
                             🌟
-                            <a href={`/posts/${post.slug}`} class="mb-2 text-lg md:text-xl font-bold text-content underline underline-offset-2 decoration-dashed">
+                            <a href={`/posts/${post.slug}`} class="mb-2 text-lg md:text-xl font-bold text-content underline underline-offset-2 decoration-dashed" transition:name={`post-title:${post.slug}`}>
                                 {post.data.title}
                             </a>
                         </div>
