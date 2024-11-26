@@ -15,7 +15,7 @@ export type Config = z.infer<typeof ConfigSchema>;
 
 export const config: Config = {
     brand: 'Astroberry',
-    author: 'Boluo IM',
+    author: 'Astroberry',
     social: [
         {
             name: 'Github',
