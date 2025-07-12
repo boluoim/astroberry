@@ -8,7 +8,7 @@ const url = `https://www.googletagmanager.com/gtag/js?id=${measureId}`;
 {
     measureId && (
         <script async src={url} is:inline></script>
-        <script define:vars={{ measureId }}>
+        <script define:vars={{ measureId }} is:inline>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
