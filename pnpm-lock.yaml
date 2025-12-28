@@ -7,7 +7,7 @@ settings:
 overrides:
   form-data: '>=4.0.4'
   glob: '>=10.5.0'
-  axios: '>=1.8.2'
+  axios: '>=1.12.0'
 
 importers:
 
