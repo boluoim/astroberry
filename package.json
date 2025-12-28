@@ -23,5 +23,10 @@
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.64",
     "@tailwindcss/typography": "^0.5.16"
+  },
+  "pnpm": {
+    "overrides": {
+      "form-data": ">=4.0.4"
+    }
   }
 }
