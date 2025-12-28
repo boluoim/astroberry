@@ -8,7 +8,7 @@ import { config } from "~config";
         <div class="flex gap-x-3">
             {
                 config.social.map((item) => (
-                    <a href={item.url} target="_blank" rel="noopener noreferrer" aria-label={item.name}>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" aria-label={item.name} class="social-icon">
                         <Icon name={item.icon} class="w-7 h-7 md:w-8 md:h-8 cursor-pointer hover:text-brand" />
                     </a>
                 ))
@@ -16,3 +16,9 @@ import { config } from "~config";
         </div>
     )
 }
+
+<style>
+    .social-icon :global(svg[data-icon="simple-icons:x"]) {
+        padding: 0.15rem;
+    }
+</style>

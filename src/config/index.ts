@@ -23,8 +23,8 @@ export const config: Config = {
             url: 'https://github.com/boluoim/astroberry'
         },
         {
-            name: 'Twitter',
-            icon: 'mdi:twitter',
+            name: 'X',
+            icon: 'simple-icons:x',
             url: 'https://github.com/boluoim/astroberry'
         },
         {
