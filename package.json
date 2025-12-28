@@ -12,7 +12,8 @@
   "dependencies": {
     "@astrojs/check": "^0.9.6",
     "@astrojs/tailwind": "^6.0.2",
-    "@fontsource-variable/space-grotesk": "^5.0.16",
+    "@fontsource/geist-mono": "^5.2.7",
+    "@fontsource/geist-sans": "^5.2.5",
     "@iconify-json/simple-icons": "^1.2.63",
     "astro": "^5.16.6",
     "astro-icon": "^1.0.3",

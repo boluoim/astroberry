@@ -21,9 +21,12 @@ importers:
       '@astrojs/tailwind':
         specifier: ^6.0.2
         version: 6.0.2(astro@5.16.6(@types/node@24.0.13)(jiti@1.21.7)(rollup@4.44.2)(typescript@5.8.3)(yaml@2.8.2))(tailwindcss@3.4.17)
-      '@fontsource-variable/space-grotesk':
-        specifier: ^5.0.16
-        version: 5.1.0
+      '@fontsource/geist-mono':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@fontsource/geist-sans':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@iconify-json/simple-icons':
         specifier: ^1.2.63
         version: 1.2.63
@@ -313,8 +316,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/space-grotesk@5.1.0':
-    resolution: {integrity: sha512-K2mwQYNyLook6EbtMB+Ix8srQsYZRigfxayoSGl1QsgVAk/J21s0FMZu0FWzTvONyQkYAR704rLfYSstVMi6jQ==}
+  '@fontsource/geist-mono@5.2.7':
+    resolution: {integrity: sha512-xVPVFISJg/K0VVd+aQN0Y7X/sw9hUcJPyDWFJ5GpyU3bHELhoRsJkPSRSHXW32mOi0xZCUQDOaPj1sqIFJ1FGg==}
+
+  '@fontsource/geist-sans@5.2.5':
+    resolution: {integrity: sha512-anllOHyJbElRs9fV15TeDRqAeb1IKm4bSknPl6ZMoyPTx1BBy7logudcUwpNjmQLkzn4Q0JGQLRCUKJYoyST6A==}
 
   '@iconify-json/mdi@1.2.1':
     resolution: {integrity: sha512-dSkQU78gsZV6Yxnq78+LuX7jzeFC/5NAmz7O3rh558GimGFcwMVY/OtqRowIzjqJBmMmWZft7wkFV4TrwRXjlg==}
@@ -2823,7 +2829,9 @@ snapshots:
   '@esbuild/win32-x64@0.25.6':
     optional: true
 
-  '@fontsource-variable/space-grotesk@5.1.0': {}
+  '@fontsource/geist-mono@5.2.7': {}
+
+  '@fontsource/geist-sans@5.2.5': {}
 
   '@iconify-json/mdi@1.2.1':
     dependencies:
