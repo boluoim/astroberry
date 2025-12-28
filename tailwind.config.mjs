@@ -8,17 +8,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['"Space Grotesk Variable"', 'Inter', 'sans-serif', ...defaultTheme.fontFamily.sans],
-				code: [
-					'Menlo',
-					'Monaco',
-					'"Lucida Console"',
-					'"Liberation Mono"',
-					'"DejaVu Sans Mono"',
-					'"Bitstream Vera Sans Mono"',
-					'"Courier New"',
-					'monospace'
-				]
+				sans: ['"Geist Sans"', ...defaultTheme.fontFamily.sans],
+				mono: ['"Geist Mono"', ...defaultTheme.fontFamily.mono],
 			},
 		},
 		colors: {
