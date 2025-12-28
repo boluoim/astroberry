@@ -112,7 +112,12 @@
 
     const theme = getPreference()
 
+    // Apply theme immediately on script load
+    reflectPreference()
+
+    // Also apply on page load and after View Transitions navigation
     window.onload = reflectPreference
+    document.addEventListener('astro:after-swap', reflectPreference)
 
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({matches:isDark}) => {
         theme.value = isDark ? 'dark' : 'light'

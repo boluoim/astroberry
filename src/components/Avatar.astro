@@ -8,17 +8,12 @@ interface Props {
 
 const props = Astro.props;
 ---
-<Image
-    id="avatar"
-    src={AvatarSrc}
-    alt="avatar"
-    class:list={[props.class]}
-    class="w-24 h-24 rounded-full cursor-pointer"
-    transition:name="avatar"
-/>
-
-<script>
-    import { navigate } from 'astro:transitions/client'
-
-    document.querySelector('#avatar')?.addEventListener('click', () => navigate('/'))
-</script>
+<a href="/">
+    <Image
+        src={AvatarSrc}
+        alt="avatar"
+        class:list={[props.class]}
+        class="w-24 h-24 rounded-full cursor-pointer"
+        transition:name="avatar"
+    />
+</a>
