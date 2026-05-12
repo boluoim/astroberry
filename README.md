@@ -24,6 +24,7 @@ pnpm create astro@latest --template boluoim/astroberry
 ### Deploy with Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fboluoim%2Fastroberry)
+[![Deploy to PandaStack](https://dashboard.pandastack.io/deploy-button.svg)](https://dashboard.pandastack.io/deploy?repo=boluoim/astroberry&type=static&buildCmd=npm+run+build&outputDir=dist)
 
 ## 📦 Tech Stack
 
